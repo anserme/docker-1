@@ -1,27 +1,27 @@
 #!/usr/bin/env bash
-if [ ! -z "${bayeport}" ]
+if [ ! -z "${port}" ]
     then
           sed -i "s/bayeport/${port}/g"  "/etc/v2ray/config.json"
 fi
-if [ ! -z "${bayelisten}" ]
+if [ ! -z "${listen}" ]
     then
-         sed -i "s/\"bayelisten\"/\"${user}\"/g" "/etc/v2ray/config.json"
+         sed -i "s/\"bayelisten\"/\"${listen}\"/g" "/etc/v2ray/config.json"
 fi
-if [ ! -z "${bayeid}" ]
+if [ ! -z "${uuid}" ]
     then
-         sed -i "s/\"bayeid\"/\"${key}\"/g" "/etc/v2ray/config.json"
+         sed -i "s/\"bayeid\"/\"${uuid}\"/g" "/etc/v2ray/config.json"
 fi
-if [ ! -z "${bayealter}" ]
+if [ ! -z "${alterid}" ]
     then
-         sed -i "s/bayealter/${alter}/g" "/etc/v2ray/config.json"
+         sed -i "s/bayealter/${alterid}/g" "/etc/v2ray/config.json"
 fi
-if [ ! -z "${bayenet}" ]
+if [ ! -z "${net}" ]
     then
-         sed -i "s/\"bayenet\"/\"${net}\"|g" "/etc/v2ray/config.json"
+         sed -i "s/\"bayenet\"/\"${net}\"/g" "/etc/v2ray/config.json"
 fi
-if [ ! -z "${bayepath}" ]
+if [ ! -z "${path}" ]
     then
-         sed -i "s/\"bayepath\"/\"${path}\"|g" "/etc/v2ray/config.json"
+         sed -i "s/\"bayepath\"/\"${path}\"/g" "/etc/v2ray/config.json"
 fi
 
 
