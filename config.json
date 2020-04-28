@@ -1,0 +1,29 @@
+{
+  "inbounds": [
+    {
+      "port": bayeport,
+      "listen":"bayelisten",//只监听 127.0.0.1，避免除本机外的机器探测到开放了 10000 端口
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "bayeid",
+            "alterId": bayealter
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "bayenet",
+        "wsSettings": {
+        "path": "bayepath"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
