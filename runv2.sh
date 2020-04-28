@@ -24,11 +24,5 @@ if [ ! -z "${bayepath}" ]
          sed -i "s/\"bayepath\"/\"${path}\"|g" "/etc/v2ray/config.json"
 fi
 
-acme.sh --install-cert -d ${domain} --ecc \
-        --key-file       /etc/v2ray/v2ray.key \
-        --fullchain-file /etc/v2ray/v2ray.crt \
-        --reloadcmd     "service nginx force-reload"
-
-
 
 v2ray -config=/etc/v2ray/config.json
