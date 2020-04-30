@@ -13,7 +13,7 @@ FROM alpine
 
 LABEL maintainer "punkmer <admin@dreamback.cc>"
 COPY --from=builder /tmp/v2ray.tgz /tmp
-COPY runv2.sh config.json /tmp
+COPY runv2.sh config.json /tmp/
 RUN apk update && apk add ca-certificates && \
     mkdir -p /usr/bin/v2ray && \
     tar xvfz /tmp/v2ray.tgz -C /usr/bin/v2ray && \
