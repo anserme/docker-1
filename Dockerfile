@@ -17,7 +17,7 @@ COPY runv2.sh config.json /tmp/
 RUN apk update && apk add ca-certificates && \
     mkdir -p /usr/bin/v2ray && \
     tar xvfz /tmp/v2ray.tgz -C /usr/bin/v2ray && \
-    mv /tmp/runv2.sh /usr/bin/v2ray && mv /tmp/config.json /etc/v2ray/
+    mv /tmp/runv2.sh /usr/bin/v2ray && mv /tmp/config.json /etc/v2ray
 
 #ENTRYPOINT ["/usr/bin/v2ray/v2ray"]
 ENV PATH /usr/bin/v2ray:$PATH
